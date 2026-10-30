@@ -1,0 +1,42 @@
+
+version: 2
+
+models:
+  - name: fct_trades
+    description: "Таблиця фактів криптовалютних угод"
+    columns:
+      - name: trade_id
+        description: "Унікальний ідентифікатор угоди"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: trader_id
+        description: "Ідентифікатор трейдера"
+
+      - name: trade_type
+        description: "Тип операції: buy або sell"
+
+      - name: total_usd
+        description: "Загальна вартість угоди в доларах"
+
+      - name: trade_date
+        description: "Дата та час здійснення угоди"
+
+  - name: dim_traders
+    description: "Аналітична таблиця трейдерів криптобіржі"
+    columns:
+      - name: trader_id
+        description: "Унікальний ідентифікатор трейдера"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: full_name
+        description: "Повне ім'я трейдера"
+
+      - name: email
+        description: "Електронна адреса трейдера"
+
+      - name: registered_at
+        description: "Дата реєстрації трейдера"

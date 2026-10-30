@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+profiles.yml
+logs/
+target/
+dbt_packages/
+
+data_lake/crypto_dbt/.user.yml
+
+/crypto_dbt/.user.yml
+/data_lake/

@@ -1,0 +1,22 @@
+
+version: 2
+
+sources:
+  - name: crypto_raw
+    description: "Сирі дані криптовалютної біржі"
+    schema: raw
+    tables:
+      - name: traders
+        description: "Користувачі криптобіржі"
+
+      - name: currencies
+        description: "Довідник криптовалют"
+
+      - name: wallets
+        description: "Гаманці трейдерів"
+
+      - name: trades
+        description: "Операції купівлі та продажу криптовалют"
+
+      - name: deposits_withdrawals
+        description: "Поповнення та виведення коштів"
